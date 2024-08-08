@@ -6,13 +6,6 @@ pipeline{
     
     stages{
 
-        stage('Clean output'){
-            steps{
-                sh "sudo chmod 777 -R *"
-                sh "sudo rm -rf output"
-            }
-        }
-
         stage('Start Grid'){
             steps{
                 sh "sudo rm -rf output"
@@ -29,6 +22,7 @@ pipeline{
 
     post{
         always{
+            sh "sudo chmod 777 -R output"
             sh "sudo docker-compose -f grid.yaml down"
             sh "sudo docker-compose -f test-suites.yaml down"
             archiveArtifacts artifacts: 'output/flight-reservation/emailable-report.html', followSymlinks: false
