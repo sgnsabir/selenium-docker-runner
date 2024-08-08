@@ -4,7 +4,9 @@ pipeline{
     stages{
 
         stage('permission'){
-            sh "sudo chmod 777 -R ."
+            steps{
+                sh "sudo chmod 777 -R ."
+            }            
         }
 
         stage('Start Grid'){
