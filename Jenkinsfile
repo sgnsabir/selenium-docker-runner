@@ -3,13 +3,6 @@ pipeline{
     
     stages{
 
-        stage('permission'){
-            steps{
-                sh "cd ./workspace"
-                sh "sudo chmod 777 -R ."
-            }            
-        }
-
         stage('Start Grid'){
             steps{
                 sh "sudo docker-compose -f grid.yaml up -d"
