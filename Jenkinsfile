@@ -8,7 +8,8 @@ pipeline{
 
         stage('Clean output'){
             steps{
-                sh "sudo rm -rf ./output"
+                sh "sudo chmod 777 -R *"
+                sh "sudo rm -rf output"
             }
         }
 
