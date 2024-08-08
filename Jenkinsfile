@@ -8,7 +8,7 @@ pipeline{
 
         stage('Clean output'){
             steps{
-                sh "sudo rm -rf output"
+                sh "sudo rm -rf ./output"
             }
         }
 
