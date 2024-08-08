@@ -6,6 +6,12 @@ pipeline{
     
     stages{
 
+        stage('Clean output'){
+            steps{
+                sh "sudo rm -rf output"
+            }
+        }
+
         stage('Start Grid'){
             steps{
                 sh "sudo rm -rf output"
