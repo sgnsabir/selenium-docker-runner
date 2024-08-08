@@ -5,6 +5,7 @@ pipeline{
 
         stage('permission'){
             steps{
+                sh "cd ./workspace"
                 sh "sudo chmod 777 -R ."
             }            
         }
