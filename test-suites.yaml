@@ -13,7 +13,7 @@ services:
     image: sgnsabir/selenium
     environment:
     - BROWSER
-    - HUB_HOST=hub    
+    - HUB_HOST=hub
     - THREAD_COUNT=4    
     - TEST_SUITE=flight-reservation.xml
     volumes:
