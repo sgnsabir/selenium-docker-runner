@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   hub:
     image: selenium/hub:4.23.0
@@ -6,7 +6,7 @@ services:
     image: selenium/node-chrome:127.0
     shm_size: '2g'
     depends_on:
-      - hub
+    - hub
     deploy:
       replicas: 0
     env_file: .env
@@ -14,7 +14,7 @@ services:
     image: selenium/node-firefox:128.0
     shm_size: '2g'
     depends_on:
-      - hub
+    - hub
     deploy:
       replicas: 0
     env_file: .env
