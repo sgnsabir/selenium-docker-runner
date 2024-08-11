@@ -24,6 +24,7 @@ pipeline{
 
     post {
         always {
+            sh "sudo chmod 777 -R output"
             sh "docker-compose -f grid.yaml down"
             sh "docker-compose -f test-suites.yaml down"
             archiveArtifacts artifacts: 'output/flight-reservation/emailable-report.html', followSymlinks: false
