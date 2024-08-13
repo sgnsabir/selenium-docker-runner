@@ -2,6 +2,7 @@ version: "3"
 services:
   vendor-portal:
     image: sgnsabir/selenium
+    pull_policy: always
     environment:
     - BROWSER
     - HUB_HOST=hub    
