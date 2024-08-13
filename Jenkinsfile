@@ -34,8 +34,8 @@ pipeline{
             //sh "sudo chmod 777 -R output"
             sh "docker-compose -f grid.yaml down"
             sh "docker-compose -f test-suites.yaml down"
-            archiveArtifacts artifacts: 'output/flight-reservation/emailable-report.html', followSymlinks: false
-            archiveArtifacts artifacts: 'output/vendor-portal/emailable-report.html', followSymlinks: false
+            //archiveArtifacts artifacts: 'output/flight-reservation/emailable-report.html', followSymlinks: false
+            //archiveArtifacts artifacts: 'output/vendor-portal/emailable-report.html', followSymlinks: false
         }
     }
 
